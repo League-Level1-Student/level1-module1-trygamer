@@ -42,4 +42,17 @@ public class SeaCreature {
 		}
 	}
 
+	public static void main(String[] args) {
+		SeaCreature bill= new SeaCreature("bill");
+		
+		String hi= bill.getName();
+		System.out.println(hi);
+		bill.eat();
+		
+		
+		
+		
+	}
+	
 }
+

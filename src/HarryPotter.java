@@ -32,16 +32,14 @@ System.out.println("casting spell: " + spell);
 	public static void main(String[] args) {
 		HarryPotter blob= new HarryPotter();
 		
-		blob.makeInvisible();
+		blob.makeInvisible(true);
 		
-		blob.spyOnSnape(); 
+		blob.spyOnSnape();
 		
-		cloakOn= false;
-		
-		blob.makeInvisible();
-		
+		blob.makeInvisible(false);
 		
 		blob.castSpell("Stupefy");
+		
 		
 		
 		
