@@ -7,7 +7,12 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class Binary_Converter {
+public class Binary_Converter implements ActionListener {
+	
+	static JFrame f = new JFrame();
+	static JPanel p = new JPanel();
+	static JButton c =new JButton();
+	static JTextField answer = new JTextField(20);
 	String convert(String input) {
         if(input.length() != 8){
              JOptionPane.showMessageDialog(null, "Enter 8 bits, silly!!!");
@@ -27,24 +32,36 @@ public class Binary_Converter {
              return "-";
         }
    }
-	private void caller() {
-	public static void main(String[] args) {
-		JFrame f = new JFrame();
-		JPanel p = new JPanel();
+	
+	public void j() {
+		
 		f.setTitle("Binary");
-		JTextField answer = new JTextField(20);
+		
 		f.add(p);
 		f.setVisible(true);
-		JButton c =new JButton();
+		
 		c.setText("converter");
+		c.addActionListener(this);
 		p.add(answer);
 		p.add(c);
-		c.addActionListener( this);
+	
 		f.pack();
+	
 	}
+	
+	
+	public static void main(String[] args) {
+		
+		Binary_Converter hi =new Binary_Converter();
+		
+		hi.j();
+		
 	}
-	public void actionPerformed(ActionEvent arg0) {
-		JButton buttonPressed = (JButton) arg0.getSource();
+	public void actionPerformed(ActionEvent e) {
+		
+	String text =answer.getText();
+	
+	System.out.println(convert(text));
 		
 		
 		
